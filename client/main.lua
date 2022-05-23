@@ -295,9 +295,9 @@ local function OpenPhone()
                 DoPhoneAnimation('cellphone_call_to_text')
             end
 
-            SetTimeout(250, function()
-                newPhoneProp()
-            end)
+--             SetTimeout(250, function()
+--                 newPhoneProp()
+--             end)
 
             QBCore.Functions.TriggerCallback('qb-garage:server:GetPlayerVehicles', function(vehicles)
                 PhoneData.GarageVehicles = vehicles
