@@ -282,12 +282,12 @@ local function OpenPhone()
             })
             PhoneData.isOpen = true
 
-            CreateThread(function()
-                while PhoneData.isOpen do
-                    DisableDisplayControlActions()
-                    Wait(1)
-                end
-            end)
+--             CreateThread(function()
+--                 while PhoneData.isOpen do
+--                     DisableDisplayControlActions()
+--                     Wait(1)
+--                 end
+--             end)
 
             if not PhoneData.CallData.InCall then
                 DoPhoneAnimation('cellphone_text_in')
