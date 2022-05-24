@@ -6,7 +6,7 @@ local Hashtags = {}
 local Calls = {}
 local Adverts = {}
 local GeneratedPlates = {}
-local WebHook = GetConvar('phone_discord_webhook', '')
+local WebHook = GetConvar('phone_webhook', '')
 local bannedCharacters = {'%','$',';'}
 local TWData = {}
 
