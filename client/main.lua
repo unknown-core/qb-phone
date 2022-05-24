@@ -148,26 +148,26 @@ local function findVehFromPlateAndLocate(plate)
     end
 end
 
-local function DisableDisplayControlActions()
-    DisableControlAction(0, 1, true) -- disable mouse look
-    DisableControlAction(0, 2, true) -- disable mouse look
-    DisableControlAction(0, 3, true) -- disable mouse look
-    DisableControlAction(0, 4, true) -- disable mouse look
-    DisableControlAction(0, 5, true) -- disable mouse look
-    DisableControlAction(0, 6, true) -- disable mouse look
-    DisableControlAction(0, 263, true) -- disable melee
-    DisableControlAction(0, 264, true) -- disable melee
-    DisableControlAction(0, 257, true) -- disable melee
-    DisableControlAction(0, 140, true) -- disable melee
-    DisableControlAction(0, 141, true) -- disable melee
-    DisableControlAction(0, 142, true) -- disable melee
-    DisableControlAction(0, 143, true) -- disable melee
-    DisableControlAction(0, 177, true) -- disable escape
-    DisableControlAction(0, 200, true) -- disable escape
-    DisableControlAction(0, 202, true) -- disable escape
-    DisableControlAction(0, 322, true) -- disable escape
-    DisableControlAction(0, 245, true) -- disable chat
-end
+-- local function DisableDisplayControlActions()
+--     DisableControlAction(0, 1, true) -- disable mouse look
+--     DisableControlAction(0, 2, true) -- disable mouse look
+--     DisableControlAction(0, 3, true) -- disable mouse look
+--     DisableControlAction(0, 4, true) -- disable mouse look
+--     DisableControlAction(0, 5, true) -- disable mouse look
+--     DisableControlAction(0, 6, true) -- disable mouse look
+--     DisableControlAction(0, 263, true) -- disable melee
+--     DisableControlAction(0, 264, true) -- disable melee
+--     DisableControlAction(0, 257, true) -- disable melee
+--     DisableControlAction(0, 140, true) -- disable melee
+--     DisableControlAction(0, 141, true) -- disable melee
+--     DisableControlAction(0, 142, true) -- disable melee
+--     DisableControlAction(0, 143, true) -- disable melee
+--     DisableControlAction(0, 177, true) -- disable escape
+--     DisableControlAction(0, 200, true) -- disable escape
+--     DisableControlAction(0, 202, true) -- disable escape
+--     DisableControlAction(0, 322, true) -- disable escape
+--     DisableControlAction(0, 245, true) -- disable chat
+-- end
 
 local function LoadPhone()
     Wait(100)
@@ -272,7 +272,7 @@ local function OpenPhone()
     QBCore.Functions.TriggerCallback('qb-phone:server:HasPhone', function(HasPhone)
         if HasPhone then
             PhoneData.PlayerData = QBCore.Functions.GetPlayerData()
-            SetNuiFocus(true, true)
+--             SetNuiFocus(true, true)
             SendNUIMessage({
                 action = "open",
                 Tweets = PhoneData.Tweets,
@@ -282,12 +282,12 @@ local function OpenPhone()
             })
             PhoneData.isOpen = true
 
-            CreateThread(function()
-                while PhoneData.isOpen do
-                    DisableDisplayControlActions()
-                    Wait(1)
-                end
-            end)
+--             CreateThread(function()
+--                 while PhoneData.isOpen do
+--                     DisableDisplayControlActions()
+--                     Wait(1)
+--                 end
+--             end)
 
             if not PhoneData.CallData.InCall then
                 DoPhoneAnimation('cellphone_text_in')
