@@ -272,7 +272,7 @@ local function OpenPhone()
     QBCore.Functions.TriggerCallback('qb-phone:server:HasPhone', function(HasPhone)
         if HasPhone then
             PhoneData.PlayerData = QBCore.Functions.GetPlayerData()
-            SetNuiFocus(true, false)
+            SetNuiFocus(false, true)
             SendNUIMessage({
                 action = "open",
                 Tweets = PhoneData.Tweets,
