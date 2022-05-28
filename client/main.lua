@@ -280,7 +280,7 @@ local function OpenPhone()
                 CallData = PhoneData.CallData,
                 PlayerData = PhoneData.PlayerData,
             })
-            PhoneData.isOpen = true
+            PhoneData.isOpen = false
 
             CreateThread(function()
                 while PhoneData.isOpen do
